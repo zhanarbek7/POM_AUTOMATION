@@ -1,0 +1,42 @@
+package pages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class CashwiseClientsPage {
+
+    WebDriver driver;
+
+    public CashwiseClientsPage(WebDriver driver){
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy
+    public WebElement searchBox;
+
+    @FindBy(xpath = "(//button[@type='button'])[2]")
+    public WebElement addClientBtn;
+
+    @FindBy()
+    public WebElement clientsTags;
+
+    @FindBy()
+    public WebElement companyName;
+
+    @FindBy()
+    public WebElement fullName;
+
+    @FindBy()
+    public WebElement email;
+
+    @FindBy()
+    public WebElement phoneNumber;
+
+    @FindBy()
+    public WebElement address;
+
+
+}
